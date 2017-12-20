@@ -1,0 +1,30 @@
+<template name="Source1">
+    <div class="ui container segment">
+        <div class="ui divided items">
+{{#if SorcesDB}}
+            {{#each SorcesDB}}
+                <div class="item">
+                        
+                        <div class="content">
+                          <a class="header clickSource" href="/singleSource">{{name}}</a>
+                          <div class="meta">
+                            <a name={{id}} href="{{url}}"><span class="cinema">{{url}}</span></a>
+                          </div>
+                          <div class="description">
+                            <p>{{description}}</p>
+                          </div>
+                          <div class="extra">
+                            <div class="ui right floated primary button FollowArticle" >
+                              Follow
+                              <i title={{id}} class="right add icon" ></i>
+                            </div>
+                            <div class="ui label">{{category}}</div>
+                          </div>
+                        </div>
+                      </div>
+                      {{/each}}
+                      {{else}}
+                      <div class="ui active centered inline loader"></div>   
+                      {{/if}}
+            </div></div>
+</template>

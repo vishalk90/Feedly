@@ -1,0 +1,11 @@
+<template name="FrontPageLayout">
+	{{> Header}}
+	<main>
+		<div class="ui container segment">
+			<h2>Explore the Sources</h2>
+			<div class="frontpage">
+				{{> Template.dynamic template=frontPage}}
+			</div>
+		</div>
+	</main>
+</template>

@@ -1,0 +1,30 @@
+<template name="MainMenu">
+        <div class="ui menu">
+				<div class="header item" style="color:aliceblue;background-color: limegreen"> <h3>Feedly</h3> </div>
+				<a class="item TodaysFeeds">Today</a>
+				<a class="item" href="/home">Sources</a>
+				<div class="ui dropdown item" tabindex="0">
+				  My Feeds
+				  <i class="dropdown icon"></i>
+				  <div class="menu" tabindex="-1">
+							<div class="item SavedForLaterReading">Saved For Later Reading</div>
+							
+					<div class="item">My Favorites</div>
+					<div class="divider"></div>
+					<div class="item ByCategory">Articles By Categories</div>
+					<div class="divider"></div>
+					<div class="item myboard">My Personal Board</div>
+				  </div>
+				</div>
+				<div class="right menu">
+				  <div class="item">
+					<div class="ui action left icon input">
+					  <i class="search icon"></i>
+					  <input type="text" placeholder="Search">
+					  <button class="ui button SearchFeedsByQ">Submit</button>
+					</div>
+				  </div>
+				  <a class="item">{{> loginButtons}}</a>
+				</div>
+              </div>
+</template>

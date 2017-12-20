@@ -1,0 +1,43 @@
+<template name="MyBoard">
+       
+    
+        <div class="ui container segment">
+                <h3>My Board - Sources</h3> 
+            <div class="ui divided items">
+                    <button class="positive ui button newArticle">Add New Article</button>
+
+                    <button class="ui right blue button EverNote">Share on Evernote</button>
+                    
+                {{#if MyBoardData}} {{#each MyBoardData}}
+                {{#unless readLater}}
+                <div class="item">
+                    
+                    <div class="content">
+                        <a name={{id}} class="header clickSource" href="/singleSource">{{name}}</a>
+                        <div class="meta"> <a href="{{url}}">
+                            <span class="cinema">{{url}}</span></a>
+                        </div>
+                        <div class="description">
+                            <p>{{description}}</p>
+                        </div>
+                        <div class="extra">
+                                <div class="ui right floated red button RemoveArticle">
+                                        Remove
+                                        <i title={{id}} class="right window close icon"></i>
+                                    </div>
+                            <div class="ui right floated primary button ReadLater">
+                                Read Later
+                                <i title={{id}} class="right inbox icon"></i>
+                            </div>
+                            
+                            <div class="ui label">{{category}}</div>
+                        </div>
+                    </div>
+                </div>{{/unless}}
+                {{/each}} 
+                {{else}}
+                <div class="ui active centered inline loader"></div>
+                {{/if}}
+            </div>
+        </div>
+    </template>

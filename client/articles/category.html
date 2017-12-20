@@ -1,0 +1,27 @@
+<template name="Category1">
+    <div class="ui container segment">
+        <div class="ui cards">
+            {{#if CategoriesDB}}
+            {{#each CategoriesDB}}
+
+            <div class="card" style="width:255px;">
+                <div class="content">
+                        
+                    <div class="header"><i class="hashtag icon"></i>{{category}}</div>
+                    <div class="description">
+                        {{description}}
+                    </div>
+                </div>
+                <div class="ui bottom attached button">
+                    <i title={{category}} class="search icon"></i>
+                    Explore
+                </div>
+            </div>
+
+            {{/each}}
+            {{else}}
+            <div class="ui active centered inline loader"></div>            
+        {{/if}}
+        </div>
+    </div>
+</template>

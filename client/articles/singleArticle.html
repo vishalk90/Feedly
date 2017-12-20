@@ -1,0 +1,43 @@
+<template name="SingleArticle">
+    <div class="ui container segment">
+
+        
+        <img class="ui fluid image" src="{{SingleArticle.urlToImage}}">
+        <div class="ui divided items">
+            <div class="item">
+
+                <div class="content">
+                    <a class="header" href="{{SingleArticle.url}}">{{SingleArticle.title}}</a>
+                    <div class="meta">
+                        <span class="cinema">{{SingleArticle.description}}</span>
+                    </div>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                    <div class="extra">
+                        <div class="ui label">Published on : {{SingleArticle.publishedAt}}</div>
+                        <div class="ui label">
+                            <i class="globe icon"></i>Source : {{SingleArticle.author}}</div>
+                    </div>
+                    <div class="ui right floated primary button">
+                        Read Later
+                        <i class="right tag icon"></i>
+                    </div>
+                    <div class="ui right floated primary button FollowArticle">
+                        Save to Board
+                        <i class="right hourglass half icon"></i>
+                    </div>
+                    <div class="ui right floated primary button">
+                        Add as favorite
+                        <i class="right heartbeat icon"></i>
+                    </div>
+                    <div class="ui right floated primary button">
+                        Follow
+                        <i class="right feed icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>
