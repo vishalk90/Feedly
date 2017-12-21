@@ -6,4 +6,4 @@ Ask Developer for server/promises/ to run the application
 * Install Meteor Framwork
 * Install Node + npm
 * Open CMD --> type `meteor` 
-* This will start localhost:3000 also starts the MongoDB.
+* This starts server with `http://localhost:3000`,and the `MongoDB` database
